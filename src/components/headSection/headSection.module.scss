@@ -1,0 +1,237 @@
+// =====================================================
+// Hero
+// ======================
+@mixin transition {
+  transition: all 0.5s linear;
+}
+$link-color: #6C63FF; // #ea4812;
+$link-hover: #6C63FF;
+$base-a80: rgba(9, 10, 11, 0.8);
+$base-container-LR-padding: 20px;
+
+$head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
+  "Helvetica Neue", sans-serif;
+
+.homePageHero,
+.errorPageHero {
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.homePageHero {
+  background-image: linear-gradient(180deg, #fff 10%, #f0f1f2);
+  // @media screen and (min-width: 768px) {
+  //   background-position: left;
+  //   background-image: url("../../images/home_hero.jpg");
+  // }
+}
+
+.hero-content {
+  // margin: 0 auto;
+  padding: 0 $base-container-LR-padding;
+  text-align: center;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  // max-width: 36rem;
+  padding-top: 4rem;
+  @media screen and (min-width: 768px) {
+    // max-width: 45rem;
+    padding-top: 6rem;
+  }
+}
+
+.error {
+  @media screen and (min-width: 768px) {
+    padding-bottom: 6rem;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: $head-font;
+  line-height: 1.17647;
+  font-weight: 600;
+  color: $base-a80; 
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: 480px) {
+    font-size: 2.2rem;
+    line-height: 1.14583em;
+
+    .nlt {
+      display: block;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 2.7rem;
+    line-height: 1.24583em;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 3.4rem;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 3.8rem;
+    letter-spacing: -0.03125rem;
+  }
+}
+
+.description {
+  font-size: 1rem;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+  // font-weight: 300;
+  max-width: 750px;
+  padding-top: 0;
+  line-height: 1.6;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.04rem;
+  }
+}
+
+.hero-button-container {
+  a {
+    display: block;
+    max-width: 157px;
+    margin: 0 auto;
+    // text-align: center;
+    // border-radius: 2px;
+    line-height: 1.5;
+    //padding: 0.8rem 1rem;
+    //height:46px;
+    outline: none;
+    padding: 10px 24px;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.03rem;
+
+    background: $link-color;
+    color: #fff;
+    @include transition;
+    &:hover {
+      cursor: pointer;
+      background: $link-hover;
+    }
+  }
+}
+
+.additional {
+  font-size: 0.85rem;
+  margin-top: 3rem;
+  line-height: 1.3rem;
+  margin-bottom: 1.5rem;
+
+  p {
+    display: inline;
+  }
+}
+
+.error-title {
+  font-size: 34px;
+  line-height: 1.17647;
+  color: $base-a80;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  @media screen and (min-width: 480px) {
+    font-size: 55px;
+    line-height: 1;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 82px;
+    line-height: 1.11905;
+  }
+}
+
+.error-description {
+  margin: 2em auto 0;
+  font-size: 16px;
+  line-height: 1.66667;
+  // font-weight: 300;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    // line-height: 1.41667;
+  }
+}
+
+.error-button {
+  margin-top: 50px;
+  @media screen and (min-width: 480px) {
+    margin-top: 40px;
+  }
+  a {
+    //border: 1px solid #f55f2d;
+    background: $link-color;
+    color: #fff;
+    @include transition;
+    &:hover {
+      cursor: pointer;
+      background: $link-hover;
+    }
+  }
+}
+
+.arrow {
+  background-color: #fff;
+  border-radius: 100px;
+  -webkit-box-shadow: 0 4px 8px #dadce0;
+  box-shadow: 0 4px 8px #dadce0;
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
+  color: #444;
+  margin-bottom: 25px;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    height: 58px;
+    width: 58px;
+
+    &:hover {
+      svg {
+        margin-bottom: -22px;
+      }
+    }
+  }
+
+  svg {
+    margin-bottom: -18px;
+    margin-left: 16px;
+    font-size: 17px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: -24px;
+      margin-left: 16px;
+      font-size: 24px;
+    }
+  }
+}
+
+// .contact {
+//   margin-top: 3px;
+//   a {
+//     border: 1px solid #e9e9e9;
+//     background: #fff;
+//     color: inherit;
+//   }
+//   @media screen and (min-width: 768px) {
+//     margin-top: 0;
+//   }
+// }
+// .button {
+//   @media screen and (min-width: 768px) {
+//     margin: 0 4px;
+//     width: 40%;
+//   }
+// }
